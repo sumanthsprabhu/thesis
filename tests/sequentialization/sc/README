@@ -1,0 +1,3 @@
+*_inv.c files have seq_inv.h, which in turn has local invariant
+*false*.c files are unsafe programs.
+*true*.c are safe programs.
