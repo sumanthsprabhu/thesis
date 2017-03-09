@@ -1,0 +1,2 @@
+This is refinement vs sequentialization comparision tried on fibonacci benchmarks from svcomp.
+It uses (!is_local || xloc <= loc && loc <= (MAXXW/2)) as invariant.
