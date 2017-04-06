@@ -1,0 +1,19 @@
+step 1:
+Given concurrent program is passed to sequential tool[Anand et al.] to get sequential program (SEQ_0.c and std.h files).
+
+step 2:
+Given concurrent program is dynamically analysed to get Defuse[Shi et al.] invariants (output is available here).
+In this step first we generate a set of executions (file "trace"), where each exeuction is a sequence of tuples.
+Each tuple consists of instruction address, thread_id, operation(read=0, write=1) and operand address.
+This set of exeuctions is parsed to generate Defuse like invariants (file "defuse").
+
+step 3:
+Invariants are added as constraints to above generated sequential program (SEQ_0_inv.c and std_inv.h files).
+This step is currently performed manually. Only local invariants are added now.
+
+step 4:
+Constrained program is passed to CBMC which has refinement loop logic.
+
+
+[Anand et al.]: Sequentialization Using Timestamps, Anand Yeolekar, Kumar Madhukar, Dipali Bhutada, Venkatesh R. In TAMC, 2017.
+[Shi et al.]: Y. Shi, S. Park, Z. Yin, S. Lu, Y. Zhou, W. Chen, and W. Zheng. Do i use the wrong definition? defuse: Definition-use invariants for detecting concurrency and sequential bugs. In OOPSLA,2010
