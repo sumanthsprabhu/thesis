@@ -9,8 +9,8 @@ This set of exeuctions is parsed to generate Defuse like invariants (file "defus
 Note that file "defuse" has instruction addresses corresponding to binary of 0.c file. This address is converted to line number by using addr2line or objdump (file "objdump_of_0").
 
 step 3:
-Invariants are added as constraints to above generated sequential program (SEQ_0_inv.c and std_inv.h files).
-This step is currently performed manually. Only local invariants are added now.
+Invariants are added as constraints to above generated sequential program (SEQ_0_inv.c and std_inv.h files). 
+This step is currently performed manually. Only local invariants are added as of now (constraints are present in std_inv.h).
 
 step 4:
 Constrained program is passed to CBMC which has refinement loop logic.
