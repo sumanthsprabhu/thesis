@@ -6,6 +6,7 @@ Given concurrent program is dynamically analysed to get Defuse[Shi et al.] invar
 In this step first we generate a set of executions (file "trace"), where each exeuction is a sequence of tuples, by running the given program under a PIN tool.
 Each tuple consists of instruction address, thread_id, operation(read=0, write=1) and operand address.
 This set of exeuctions is parsed to generate Defuse like invariants (file "defuse").
+Note that file "defuse" has instruction addresses corresponding to binary of 0.c file. This address is converted to line number by using addr2line or objdump (file "objdump_of_0").
 
 step 3:
 Invariants are added as constraints to above generated sequential program (SEQ_0_inv.c and std_inv.h files).
