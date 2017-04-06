@@ -2,7 +2,7 @@ step 1:
 Given concurrent program(0.c file) is passed to sequential tool[Anand et al.] to get sequential program (SEQ_0.c and std.h files).
 
 step 2:
-Given concurrent program is dynamically analysed to get Defuse[Shi et al.] invariants (output is available here).
+Given concurrent program is dynamically analysed to get Defuse[Shi et al.] invariants.
 In this step first we generate a set of executions (file "trace"), where each exeuction is a sequence of tuples, by running the given program under a PIN tool.
 Each tuple consists of instruction address, thread_id, operation(read=0, write=1) and operand address.
 This set of exeuctions is parsed to generate Defuse like invariants (file "defuse").
